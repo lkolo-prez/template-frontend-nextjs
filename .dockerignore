@@ -1,0 +1,33 @@
+# Keep the build context small and avoid leaking local/secret files.
+.git
+.github
+.next
+node_modules
+coverage
+playwright-report
+test-results
+**/*.log
+
+# Docs & meta
+docs
+*.md
+LICENSE
+
+# Local env & editor
+.env
+.env.*
+!.env.example
+.vscode
+.idea
+.devcontainer
+.cursor
+
+# Tooling that is not needed inside the image
+e2e
+test
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+lighthouserc.json
+playwright.config.ts
+vitest.config.ts

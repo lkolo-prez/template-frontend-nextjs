@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/**
+ * Tailwind CSS v4 uses CSS-first configuration via the @theme directive.
+ * Design tokens below double as light/dark theme variables.
+ */
+@theme {
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.15 0 0);
+  --color-muted: oklch(0.96 0 0);
+  --color-muted-foreground: oklch(0.45 0 0);
+  --color-primary: oklch(0.55 0.2 264);
+  --color-primary-foreground: oklch(0.99 0 0);
+  --color-border: oklch(0.9 0 0);
+  --radius: 0.625rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-background: oklch(0.15 0 0);
+    --color-foreground: oklch(0.98 0 0);
+    --color-muted: oklch(0.23 0 0);
+    --color-muted-foreground: oklch(0.65 0 0);
+    --color-border: oklch(0.3 0 0);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}

@@ -1,0 +1,20 @@
+# security.txt — RFC 9116 (https://www.rfc-editor.org/rfc/rfc9116)
+#
+# This static file is served at "/.well-known/security.txt". Note that Next.js
+# only serves files placed under `public/`, so for this to be reachable at the
+# canonical path either:
+#   (a) move/symlink it to `public/.well-known/security.txt`, or
+#   (b) serve it from an `app/.well-known/security.txt/route.ts` route handler.
+# When the file lives at the canonical web root it SHOULD be served over HTTPS
+# and SHOULD be digitally signed (see the Signature field below).
+#
+# Keep `Expires` no more than ~1 year out and refresh it before it lapses.
+
+Contact: mailto:security@aircloud.com.pl
+Contact: https://github.com/aircloud/template-frontend-nextjs/security/advisories/new
+Expires: 2027-06-30T00:00:00.000Z
+Encryption: https://aircloud.com.pl/.well-known/pgp-key.txt
+Preferred-Languages: en, pl
+Canonical: https://app.aircloud.com.pl/.well-known/security.txt
+Policy: https://github.com/aircloud/template-frontend-nextjs/blob/main/SECURITY.md
+Hiring: https://aircloud.com.pl/careers

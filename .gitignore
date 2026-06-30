@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Next.js
+.next
+out
+next-env.d.ts.bak
+
+# Production
+build
+dist
+
+# Test & coverage
+coverage
+playwright-report
+test-results
+.playwright
+
+# Tooling output
+sbom.cdx.json
+*.tsbuildinfo
+.eslintcache
+
+# Env files (never commit secrets)
+.env
+.env*.local
+.env.development
+.env.production
+!.env.example
+
+# OS / editor
+.DS_Store
+*.log
+.idea
+*.swp
+
+# Lighthouse
+.lighthouseci

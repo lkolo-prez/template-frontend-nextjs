@@ -1,0 +1,34 @@
+---
+description: Project-wide rules for the AirCloud Next.js 15 frontend template.
+globs:
+  - "**/*.ts"
+  - "**/*.tsx"
+alwaysApply: true
+---
+
+# AirCloud Next.js frontend — Cursor rules
+
+Stack: Next.js 15 App Router, React 19, TypeScript strict, pnpm, Tailwind v4,
+TanStack Query, Zod, server actions. Lint/format with Biome.
+
+## Always
+
+- Default to Server Components; add `"use client"` only when needed.
+- Keep TypeScript strict: no `any`, no `!`, respect `noUncheckedIndexedAccess`.
+- Validate untrusted input with Zod schemas in `lib/schemas.ts`.
+- Reuse `components/ui/*` and the `cn()` helper from `lib/utils.ts`.
+- Read config through `env.ts`; public vars are `NEXT_PUBLIC_*`.
+- Use Conventional Commits; sign commits.
+
+## Never
+
+- Use `dangerouslySetInnerHTML`.
+- Add `'unsafe-inline'` to the script CSP (it is nonce-based in `middleware.ts`).
+- Add a remote image/script host without allowlisting it in both
+  `middleware.ts` and `next.config.ts`.
+- Hand-format code — Biome owns formatting and import order.
+- Reference `env.server` from a client component.
+
+## Commands
+
+`pnpm dev | build | start | lint | typecheck | test | e2e | lighthouse`

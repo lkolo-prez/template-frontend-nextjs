@@ -1,0 +1,18 @@
+# Code ownership for review routing and the CODEOWNERS branch-protection rule.
+# Order matters: the last matching pattern takes precedence.
+
+*                           @aircloud/frontend-platform
+
+# Security-sensitive surfaces require the security team's review.
+/middleware.ts              @aircloud/frontend-platform @aircloud/security
+/next.config.ts             @aircloud/frontend-platform @aircloud/security
+/env.ts                     @aircloud/frontend-platform @aircloud/security
+
+# CI/CD and supply chain
+/.github/                   @aircloud/devops @aircloud/security
+/Dockerfile                 @aircloud/devops @aircloud/security
+/.github/workflows/         @aircloud/devops @aircloud/security
+
+# Governance docs
+/SECURITY.md                @aircloud/security
+/CODE_OF_CONDUCT.md         @aircloud/maintainers

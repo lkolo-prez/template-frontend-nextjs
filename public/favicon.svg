@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="AirCloud">
+  <rect width="32" height="32" rx="7" fill="#0a0a0a"/>
+  <path d="M22.5 21.5a4.25 4.25 0 0 0-1.05-8.37 6 6 0 0 0-11.6 1.6A3.75 3.75 0 0 0 10.25 21.5h12.25z" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M13 16.5l2.5 2.5 4.5-5" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

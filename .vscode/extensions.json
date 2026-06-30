@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "biomejs.biome",
+    "bradlc.tailwindcss-intellisense",
+    "ms-playwright.playwright",
+    "vitest.explorer",
+    "github.vscode-github-actions",
+    "editorconfig.editorconfig",
+    "redhat.vscode-yaml",
+    "ms-azuretools.vscode-docker",
+    "github.copilot"
+  ],
+  "unwantedRecommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ]
+}

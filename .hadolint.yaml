@@ -1,0 +1,15 @@
+# Hadolint configuration. We pin base images by digest in CI via the
+# container workflow; for local readability the Dockerfile uses tags, so we
+# relax DL3007 (latest tag) is still enforced — only digest pinning is advisory.
+failure-threshold: warning
+trustedRegistries:
+  - docker.io
+  - gcr.io
+  - ghcr.io
+ignored:
+  # DL3059: multiple consecutive RUN — acceptable for cache-mount clarity.
+  - DL3059
+override:
+  error:
+    - DL3002 # do not switch to root
+    - DL3025 # use JSON notation for CMD/ENTRYPOINT

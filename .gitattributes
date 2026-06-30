@@ -1,0 +1,16 @@
+# Normalize line endings to LF on checkin; keep binaries untouched.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+
+# Lockfiles: treat as generated for review diffs.
+pnpm-lock.yaml linguist-generated=true -diff
+
+# Keep shell scripts LF even on Windows checkouts.
+*.sh text eol=lf

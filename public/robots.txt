@@ -1,0 +1,12 @@
+# robots.txt — served from the site root by Next.js (files in public/ are
+# exposed at "/"). For dynamic, per-environment rules prefer an
+# app/robots.ts route handler instead of this static file.
+
+User-agent: *
+Allow: /
+
+# Keep crawlers out of the API surface and health probe.
+Disallow: /api/
+
+# Point crawlers at the sitemap. Update the host to your deployment URL.
+Sitemap: https://app.aircloud.com.pl/sitemap.xml

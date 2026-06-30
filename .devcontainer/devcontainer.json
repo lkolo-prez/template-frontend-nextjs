@@ -1,0 +1,35 @@
+{
+  "name": "template-frontend-nextjs",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "containerEnv": {
+    "NEXT_TELEMETRY_DISABLED": "1"
+  },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": { "label": "Next.js dev server", "onAutoForward": "notify" }
+  },
+  "onCreateCommand": "corepack enable && corepack prepare pnpm@9.15.4 --activate",
+  "postCreateCommand": "pnpm install --frozen-lockfile && pnpm exec playwright install --with-deps",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "biomejs.biome",
+        "bradlc.tailwindcss-intellisense",
+        "ms-playwright.playwright",
+        "vitest.explorer",
+        "github.vscode-github-actions",
+        "editorconfig.editorconfig",
+        "github.copilot"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "biomejs.biome",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "remoteUser": "node"
+}
