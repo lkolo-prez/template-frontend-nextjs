@@ -6,7 +6,7 @@
 
 # --- Dependencies -----------------------------------------------------------
 # Pin the builder by digest in real use; tag shown for readability.
-FROM node:22.13.0-bookworm-slim AS deps
+FROM node:26.8-bookworm-slim AS deps
 WORKDIR /app
 ENV CI=true \
     PNPM_HOME="/pnpm" \
@@ -18,7 +18,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
     pnpm install --frozen-lockfile
 
 # --- Build ------------------------------------------------------------------
-FROM node:22.13.0-bookworm-slim AS builder
+FROM node:26.8-bookworm-slim AS builder
 WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED=1 \
     NODE_ENV=production \
