@@ -1,8 +1,12 @@
+<p align="center">
+  <a href="https://aircloud.com.pl"><img src=".github/assets/banner.png" alt="AIRCLOUD: DevOps, cloud and AI engineering" width="100%"></a>
+</p>
+
 # template-frontend-nextjs
 
-[![CI](https://github.com/aircloud/template-frontend-nextjs/actions/workflows/ci.yml/badge.svg)](https://github.com/aircloud/template-frontend-nextjs/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/aircloud/template-frontend-nextjs/actions/workflows/codeql.yml/badge.svg)](https://github.com/aircloud/template-frontend-nextjs/actions/workflows/codeql.yml)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/aircloud/template-frontend-nextjs/badge)](https://securityscorecards.dev/viewer/?uri=github.com/aircloud/template-frontend-nextjs)
+**Security-hardened Next.js 15 / React 19 frontend template with a nonce-based CSP, Playwright a11y tests and Lighthouse budgets.**
+
+[![CI](https://github.com/lkolo-prez/template-frontend-nextjs/actions/workflows/ci.yml/badge.svg)](https://github.com/lkolo-prez/template-frontend-nextjs/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
 
 A production-grade, security-hardened **Next.js 15** frontend template.
@@ -11,7 +15,7 @@ A production-grade, security-hardened **Next.js 15** frontend template.
 > `ghcr.io/aircloud`, and Azure prefix `aircloud` are **examples** — replace
 > them with your own when you copy this repo. Target year: **2026**.
 
-## Stack
+## What's inside
 
 | Concern        | Choice                                                  |
 | -------------- | ------------------------------------------------------- |
@@ -26,7 +30,13 @@ A production-grade, security-hardened **Next.js 15** frontend template.
 | Perf budgets   | Lighthouse CI                                           |
 | Container      | Multi-stage → `gcr.io/distroless/nodejs22:nonroot`      |
 
-## Quick start
+## Usage
+
+Create a new repository from this template (or use **Use this template** on GitHub):
+
+```bash
+gh repo create <your-org>/<name> --template lkolo-prez/template-frontend-nextjs --private --clone
+```
 
 ```bash
 corepack enable
@@ -97,3 +107,22 @@ GitHub Ruleset — see [`docs/BRANCH-PROTECTION.md`](./docs/BRANCH-PROTECTION.md
 ## License
 
 [Apache-2.0](./LICENSE)
+
+---
+
+## Part of the AIRCLOUD golden path
+
+| Repository | What it is |
+| --- | --- |
+| [00-engineering-standards](https://github.com/lkolo-prez/00-engineering-standards) | Golden paths, security baseline, AI-assistant policy (handbook) |
+| [template-terraform-azure](https://github.com/lkolo-prez/template-terraform-azure) | Terraform on Azure: private AKS, Key Vault, ACR, OIDC, policy-as-code |
+| [template-gitops-argocd](https://github.com/lkolo-prez/template-gitops-argocd) | Argo CD, Kustomize, Argo Rollouts, Kyverno, External Secrets |
+| [template-backend-python](https://github.com/lkolo-prez/template-backend-python) | FastAPI, Python 3.12, uv, ruff, pytest |
+| [template-backend-go](https://github.com/lkolo-prez/template-backend-go) | Go 1.23, chi, slog, OpenTelemetry, golangci-lint |
+| [template-backend-typescript](https://github.com/lkolo-prez/template-backend-typescript) | Node 22, TypeScript, Fastify 5, Zod, Vitest, pnpm |
+| **template-frontend-nextjs** (this repo) | Next.js 15, React 19, Tailwind v4, Playwright, Lighthouse CI |
+| [.github](https://github.com/lkolo-prez/.github) | Reusable CI/CD workflows and community-health defaults |
+
+Terraform modules for Azure: [AIRCLOUD-PL](https://github.com/AIRCLOUD-PL).
+
+Built and maintained by [AIRCLOUD](https://aircloud.com.pl): DevOps, cloud and AI engineering. Need help adopting the golden path? See [aircloud.com.pl/consulting](https://aircloud.com.pl/consulting).
