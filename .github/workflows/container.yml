@@ -16,7 +16,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  IMAGE_NAME: ghcr.io/aircloud/template-frontend-nextjs
+  # Image lives next to the repository (GHCR needs a lowercase name).
+  IMAGE_NAME: ghcr.io/${{ github.repository }}
 
 jobs:
   build:
