@@ -15,8 +15,9 @@
   --radius: 0.625rem;
 }
 
+/* @theme cannot be nested in Tailwind v4; override the theme variables instead. */
 @media (prefers-color-scheme: dark) {
-  @theme {
+  :root {
     --color-background: oklch(0.15 0 0);
     --color-foreground: oklch(0.98 0 0);
     --color-muted: oklch(0.23 0 0);

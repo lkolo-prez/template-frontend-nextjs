@@ -24,8 +24,7 @@ const sizeClasses: Record<Size, string> = {
   lg: "h-11 px-6 text-base",
 };
 
-export interface ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
   size?: Size;
   /** Render the child element as the button (shadcn/ui-style `asChild`). */

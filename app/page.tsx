@@ -28,8 +28,7 @@ export default function HomePage() {
             page.
           </li>
           <li>
-            Health endpoint:{" "}
-            <code className="font-mono">/api/health</code>
+            Health endpoint: <code className="font-mono">/api/health</code>
           </li>
           <li>Run quality gates with `make security` and `pnpm test`.</li>
         </ul>

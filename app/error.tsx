@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
  * function to retry rendering. We deliberately do not render `error.message`
  * to the user in production to avoid leaking internals.
  */
-export default function Error({
+export default function RouteError({
   error,
   reset,
 }: {

@@ -11,8 +11,7 @@ export const metadata: Metadata = {
     default: env.client.NEXT_PUBLIC_APP_NAME,
     template: `%s · ${env.client.NEXT_PUBLIC_APP_NAME}`,
   },
-  description:
-    "Production-grade Next.js 15 frontend template by AirCloud.",
+  description: "Production-grade Next.js 15 frontend template by AirCloud.",
   robots: { index: true, follow: true },
 };
 
