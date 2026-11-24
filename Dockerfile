@@ -31,7 +31,7 @@ RUN pnpm build
 
 # --- Runtime ----------------------------------------------------------------
 # Distroless Node 22, non-root by default, no shell, read-only-rootfs friendly.
-FROM gcr.io/distroless/nodejs22-debian12:nonroot AS runner
+FROM gcr.io/distroless/nodejs22-debian13:nonroot AS runner
 WORKDIR /app
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
