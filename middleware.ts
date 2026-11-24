@@ -12,6 +12,15 @@ import { type NextRequest, NextResponse } from "next/server";
 export function middleware(request: NextRequest): NextResponse {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const isDev = process.env.NODE_ENV !== "production";
+  // WebKit applies upgrade-insecure-requests to loopback too, which breaks
+  // plain-HTTP local runs (e2e against `pnpm start`). Real hosts keep it.
+  // Use the Host header: behind `next start`/standalone, nextUrl reflects the
+  // bind address rather than the host the browser requested.
+  const hostname = (request.headers.get("host") ?? "").replace(/:\d+$/, "");
+  const isLoopback =
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname === "[::1]";
 
   // In dev, Next.js needs 'unsafe-eval' for React Fast Refresh. Never in prod.
   const scriptSrc = isDev
@@ -33,7 +42,7 @@ export function middleware(request: NextRequest): NextResponse {
     "frame-src 'none'",
     "manifest-src 'self'",
     "worker-src 'self' blob:",
-    "upgrade-insecure-requests",
+    ...(isLoopback ? [] : ["upgrade-insecure-requests"]),
   ].join("; ");
 
   // Forward the nonce to the rendering pipeline.
