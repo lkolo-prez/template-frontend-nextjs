@@ -12,9 +12,9 @@
 **Please do not open public issues for security problems.**
 
 Report privately via **GitHub Security Advisories**:
-<https://github.com/aircloud/template-frontend-nextjs/security/advisories/new>
+<https://github.com/lkolo-prez/template-frontend-nextjs/security/advisories/new>
 
-If you cannot use GitHub advisories, email **security@aircloud.com.pl** and
+If you cannot use GitHub advisories, email **office@aircloud.com.pl** and
 encrypt sensitive details where possible. Our machine-readable contact info is
 published at
 <https://aircloud.com.pl/.well-known/security.txt> (see also the pointer in
